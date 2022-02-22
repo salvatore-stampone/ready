@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+@import "config";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    color: $primary-bg-clr;
+    background-color: $primary-clr;
+}
+
+span::selection {
+    color: black;
+}
+
+html {
+    font-family: "Montserrat", sans-serif;
+    color: $primary-txt-clr;
+    height: 100%;
+    background-color: $primary-bg-clr;
+}
+
+body {
+    padding-bottom: 1rem;
+}
+
+input,
+button {
+    font-family: "Montserrat", sans-serif;
+}
+
+h3 {
+    margin-top: 1.5rem;
+}
+
+.logo {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0) 30%,
+        $primary-clr 30%,
+        $primary-clr 80%
+    );
+}
+
+.logo-image {
+    width: 100%;
+    margin: 1rem auto 0;
+    aspect-ratio: 16/9;
+    height: 4rem;
+}
+
+.spacer {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 6rem;
+}
+
+.waves {
+    top: 0;
+    position: sticky;
+    background-image: url("../assets/img/layered-waves-haikei-1.svg");
+}
+
+.book-icon {
+    font-size: 12.5rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.caption {
+    text-align: center;
+
+    .highlight {
+        color: $primary-clr;
+    }
+}
+
+.main-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $primary-txt-clr;
+    color: $primary-bg-clr;
+    background-color: $primary-txt-clr;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+        color: $primary-clr;
+    }
+
+    &:active {
+        color: $primary-clr-dark;
+    }
+}
+
+.round-btn {
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    margin-inline: 0.1em;
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+.search-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin: 0.75rem 0;
+}
+
+.search-label {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.search {
+    height: 2rem;
+    width: 20rem;
+    padding: 1.25rem;
+    border: none;
+    border-bottom: 1px solid gray;
+    font-size: 1.25rem;
+    outline: none;
+    display: inline;
+    background-color: transparent;
+
+    &:focus {
+        border-bottom: 1px solid $primary-txt-clr;
+        transition: ease-in-out 250ms;
+
+        & + .search-icon {
+            color: $primary-txt-clr;
+            transition: ease-in-out 250ms;
+        }
+    }
+}
+
+.search-icon {
+    cursor: pointer;
+    color: gray;
+
+    &:hover {
+        color: $primary-txt-clr;
+        transition: ease-in-out 250ms;
+    }
+}
+
+.long-btn {
+    border-radius: 2.5rem;
+    padding: 1rem;
+}
+
+.back-to-top-btn {
+    font-size: 1.5rem;
+    margin: 1rem auto 3rem;
+}
+
+//Config for animating the appearing of elements
+.hidden {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: height 600ms, opacity 600ms;
+}
+
+.visible {
+    height: auto;
+    opacity: 1;
+    transition: height 400ms, opacity 600ms;
+}
+
+//Styling the cancel button in the search bar
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    background-image: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    opacity: 0;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+input[type="search"]:focus::-webkit-search-cancel-button {
+    opacity: 0.3;
+    pointer-events: all;
+}
+
+//Show search results
+.results-title-box {
+    text-align: center;
+    margin: 0.25rem auto 0;
+    border-top: 0.25rem solid $primary-clr;
+    padding-top: 1rem;
+    width: max-content;
+}
+
+.no-data-result {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem auto;
+    white-space: pre-line;
+}
+
+.book-cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+    margin: 0 auto;
+    padding: 0.75rem;
+    background-image: url("../assets/img/blob-scatter-haikei.svg");
+}
+
+.book-card {
+    width: 100%;
+    height: max-content;
+    margin-top: 2rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.3rem 0.3rem 1rem 0.3rem black;
+    overflow: auto;
+    background-color: $primary-bg-clr;
+
+    &:first-of-type {
+        margin-top: 0.5rem;
+    }
+
+    background-image: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/book-open.svg);
+    background-size: 8.5rem;
+    background-repeat: no-repeat;
+    background-position: bottom -2.75rem right -2rem;
+}
+
+.book-title {
+    margin: 0;
+    font-style: italic;
+    width: max-content;
+}
+
+.book-author {
+    margin: 0;
+    width: max-content;
+}
+
+.read-more-btn {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    background-color: $primary-clr;
+    color: $primary-bg-clr;
+    border: 0.25rem solid $primary-clr;
+
+    &:active {
+        color: $primary-bg-clr;
+        background-color: $primary-clr-dark;
+        border-color: $primary-clr-dark;
+    }
+
+    &:hover {
+        color: $primary-txt-clr;
+    }
+}
+
+.book-description {
+    margin: 0.5rem 0.1rem 1rem;
+}
+
+.unexpanded {
+    font-size: 0;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    transition: opacity 250ms, font-size 500ms 250ms, margin 500ms 250ms, padding 500ms 250ms;
+}
+
+.expanded {
+    transition: font-size 0.25s, margin 0.25s, padding 0.25s, opacity 0.5s 0.25s;
+}
+
+//Footer
+.copyright {
+    width: 100%;
+    background-color: $primary-clr;
+    color: $primary-bg-clr;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+
+@import "./queries/_tablet.scss";
+@import "./queries/_laptop.scss";
+@import "./queries/_desktop.scss";

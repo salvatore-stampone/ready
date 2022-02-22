@@ -1,0 +1,409 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::-moz-selection {
+  color: #ebebeb;
+  background-color: #bf0603;
+}
+
+::selection {
+  color: #ebebeb;
+  background-color: #bf0603;
+}
+
+span::-moz-selection {
+  color: black;
+}
+
+span::selection {
+  color: black;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  color: #212121;
+  height: 100%;
+  background-color: #ebebeb;
+}
+
+body {
+  padding-bottom: 1rem;
+}
+
+input,
+button {
+  font-family: "Montserrat", sans-serif;
+}
+
+h3 {
+  margin-top: 1.5rem;
+}
+
+.logo {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), color-stop(30%, rgba(255, 255, 255, 0)), color-stop(30%, #bf0603), color-stop(80%, #bf0603));
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 30%, #bf0603 30%, #bf0603 80%);
+}
+
+.logo-image {
+  width: 100%;
+  margin: 1rem auto 0;
+  aspect-ratio: 16/9;
+  height: 4rem;
+}
+
+.spacer {
+  aspect-ratio: 960/300;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 6rem;
+}
+
+.waves {
+  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  background-image: url("../assets/img/layered-waves-haikei-1.svg");
+}
+
+.book-icon {
+  font-size: 12.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.caption {
+  text-align: center;
+}
+
+.caption .highlight {
+  color: #bf0603;
+}
+
+.main-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #212121;
+  color: #ebebeb;
+  background-color: #212121;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: #bf0603;
+}
+
+.btn:active {
+  color: #a20402;
+}
+
+.round-btn {
+  width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
+  margin-inline: 0.1em;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.search-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  margin: 0.75rem 0;
+}
+
+.search-label {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.search {
+  height: 2rem;
+  width: 20rem;
+  padding: 1.25rem;
+  border: none;
+  border-bottom: 1px solid gray;
+  font-size: 1.25rem;
+  outline: none;
+  display: inline;
+  background-color: transparent;
+}
+
+.search:focus {
+  border-bottom: 1px solid #212121;
+  -webkit-transition: ease-in-out 250ms;
+  transition: ease-in-out 250ms;
+}
+
+.search:focus + .search-icon {
+  color: #212121;
+  -webkit-transition: ease-in-out 250ms;
+  transition: ease-in-out 250ms;
+}
+
+.search-icon {
+  cursor: pointer;
+  color: gray;
+}
+
+.search-icon:hover {
+  color: #212121;
+  -webkit-transition: ease-in-out 250ms;
+  transition: ease-in-out 250ms;
+}
+
+.long-btn {
+  border-radius: 2.5rem;
+  padding: 1rem;
+}
+
+.back-to-top-btn {
+  font-size: 1.5rem;
+  margin: 1rem auto 3rem;
+}
+
+.hidden {
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  -webkit-transition: height 600ms, opacity 600ms;
+  transition: height 600ms, opacity 600ms;
+}
+
+.visible {
+  height: auto;
+  opacity: 1;
+  -webkit-transition: height 400ms, opacity 600ms;
+  transition: height 400ms, opacity 600ms;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
+  background-image: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  opacity: 0;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+input[type="search"]:focus::-webkit-search-cancel-button {
+  opacity: 0.3;
+  pointer-events: all;
+}
+
+.results-title-box {
+  text-align: center;
+  margin: 0.25rem auto 0;
+  border-top: 0.25rem solid #bf0603;
+  padding-top: 1rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.no-data-result {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem auto;
+  white-space: pre-line;
+}
+
+.book-cards-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: 0 auto;
+  padding: 0.75rem;
+  background-image: url("../assets/img/blob-scatter-haikei.svg");
+}
+
+.book-card {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin-top: 2rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0.3rem 0.3rem 1rem 0.3rem black;
+          box-shadow: 0.3rem 0.3rem 1rem 0.3rem black;
+  overflow: auto;
+  background-color: #ebebeb;
+  background-image: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/book-open.svg);
+  background-size: 8.5rem;
+  background-repeat: no-repeat;
+  background-position: bottom -2.75rem right -2rem;
+}
+
+.book-card:first-of-type {
+  margin-top: 0.5rem;
+}
+
+.book-title {
+  margin: 0;
+  font-style: italic;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.book-author {
+  margin: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.read-more-btn {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  background-color: #bf0603;
+  color: #ebebeb;
+  border: 0.25rem solid #bf0603;
+}
+
+.read-more-btn:active {
+  color: #ebebeb;
+  background-color: #a20402;
+  border-color: #a20402;
+}
+
+.read-more-btn:hover {
+  color: #212121;
+}
+
+.book-description {
+  margin: 0.5rem 0.1rem 1rem;
+}
+
+.unexpanded {
+  font-size: 0;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  -webkit-transition: opacity 250ms, font-size 500ms 250ms, margin 500ms 250ms, padding 500ms 250ms;
+  transition: opacity 250ms, font-size 500ms 250ms, margin 500ms 250ms, padding 500ms 250ms;
+}
+
+.expanded {
+  -webkit-transition: font-size 0.25s, margin 0.25s, padding 0.25s, opacity 0.5s 0.25s;
+  transition: font-size 0.25s, margin 0.25s, padding 0.25s, opacity 0.5s 0.25s;
+}
+
+.copyright {
+  width: 100%;
+  background-color: #bf0603;
+  color: #ebebeb;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .logo {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), color-stop(30%, rgba(255, 255, 255, 0)), color-stop(30%, #bf0603), color-stop(80%, #bf0603));
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 30%, #bf0603 30%, #bf0603 80%);
+  }
+  .caption {
+    margin: 0 4rem;
+  }
+  .book-cards-container {
+    background-image: url("../../assets/img/blob-scatter-haikei-1.svg");
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 1.05rem;
+  }
+  .logo {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), color-stop(30%, rgba(255, 255, 255, 0)), color-stop(30%, #bf0603), color-stop(80%, #bf0603));
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 30%, #bf0603 30%, #bf0603 80%);
+  }
+  .book-cards-container {
+    background-image: url("../../assets/img/blob-scatter-haikei-1.svg");
+  }
+  .book-card {
+    width: 35rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 1.1rem;
+  }
+  .logo {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), color-stop(30%, rgba(255, 255, 255, 0)), color-stop(30%, #bf0603), color-stop(80%, #bf0603));
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 30%, #bf0603 30%, #bf0603 80%);
+  }
+  .book-cards-container {
+    background-image: url("../../assets/img/blob-scatter-haikei-1.svg");
+  }
+  .book-card {
+    width: 40rem;
+  }
+}
