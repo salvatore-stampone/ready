@@ -14,7 +14,9 @@
     }
 
     .book-cards-container {
-        background-image: url("/ready/assets/img/blob-scatter-haikei-1.svg");
+        width: 100%;
+        height: max-content;
+        background-image: url("../../assets/img/blob-scatter-haikei-1.svg");
     }
 
     .book-card {
