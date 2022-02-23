@@ -376,7 +376,7 @@ input[type="search"]:focus::-webkit-search-cancel-button {
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
-    background-image: url("/assets/img/blob-scatter-haikei-1.svg");
+    background-image: url("/ready/assets/img/blob-scatter-haikei-1.svg");
   }
 }
 
@@ -389,7 +389,7 @@ input[type="search"]:focus::-webkit-search-cancel-button {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 30%, #bf0603 30%, #bf0603 80%);
   }
   .book-cards-container {
-    background-image: url("/assets/img/blob-scatter-haikei-1.svg");
+    background-image: url("/ready/assets/img/blob-scatter-haikei-1.svg");
   }
   .book-card {
     width: 35rem;
@@ -405,7 +405,7 @@ input[type="search"]:focus::-webkit-search-cancel-button {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 30%, #bf0603 30%, #bf0603 80%);
   }
   .book-cards-container {
-    background-image: url("/assets/img/blob-scatter-haikei-1.svg");
+    background-image: url("/ready/assets/img/blob-scatter-haikei-1.svg");
   }
   .book-card {
     width: 40rem;
