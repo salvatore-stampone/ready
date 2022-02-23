@@ -372,6 +372,10 @@ input[type="search"]:focus::-webkit-search-cancel-button {
     margin: 0 4rem;
   }
   .book-cards-container {
+    width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
     background-image: url("/assets/img/blob-scatter-haikei-1.svg");
   }
 }
