@@ -60,7 +60,7 @@ let resultsTitleBox;
 async function getData(subj) {
     try {
         //Get the actual data
-        const response = await fetch(`http://openlibrary.org/subjects/${subj.toLowerCase()}.json`);
+        const response = await fetch(`https://openlibrary.org/subjects/${subj.toLowerCase()}.json`);
         const data = await response.json();
         // console.log(data);
 
